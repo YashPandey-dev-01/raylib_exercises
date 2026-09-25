@@ -5,19 +5,20 @@ function running() {
     return !r.WindowShouldClose();
 }
 
+const windowWidth = 800;
+const windowHeight = 600;
 
 function setup() {
-    const windowWidth = 800;
-    const windowHeight = 600;
     const fps = 50;
     r.InitWindow(windowWidth, windowHeight, "Center Rectangle");
     r.SetTargetFPS(fps);
 }
 
-const rectangleWidth = 290;
-const rectangleHeight = 307;
 
 function draw() {
+    const rectangleWidth = 290;
+    const rectangleHeight = 307;
+
     const x = math.rectangleCoordinate(windowWidth, rectangleWidth);
     const y = math.rectangleCoordinate(windowHeight, rectangleHeight);
 
